@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
     use HasFactory;
+
+    protected $table = 'key_note_speakers';
+
+    protected $fillable = [
+        'vpath',
+        'title',
+        'order'
+    ];
 }

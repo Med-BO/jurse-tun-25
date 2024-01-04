@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Tweet extends Model
 {
     use HasFactory;
+
+    protected $table = 'tweets';
+
+    protected $fillable = [
+        'link',
+        'datetweet'
+    ];
 }

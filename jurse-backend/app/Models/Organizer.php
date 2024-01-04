@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Organizer extends Model
 {
     use HasFactory;
+
+    protected $table = 'organizers';
+
+    protected $fillable = [
+        'src',
+        'alt',
+        'order'
+    ];
 }

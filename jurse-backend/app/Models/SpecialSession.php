@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class SpecialSession extends Model
 {
     use HasFactory;
+
+    protected $table = 'special_sessions';
+
+    protected $fillable = [
+        'title',
+        'description',
+        'order'
+    ];
 }

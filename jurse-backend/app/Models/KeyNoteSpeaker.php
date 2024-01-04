@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class KeyNoteSpeaker extends Model
 {
     use HasFactory;
+
+    protected $table = 'key_note_speakers';
+
+    protected $fillable = [
+        'firstname',
+        'lastname',
+        'description',
+        'website'
+    ];
 }
