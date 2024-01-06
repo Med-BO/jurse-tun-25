@@ -62,4 +62,9 @@ class KeyNoteSpeakerController extends Controller
     {
         //
     }
+
+    public function getAll() {
+        $keyNoteSpeakers = KeyNoteSpeaker::all();
+        return response()->json($keyNoteSpeakers);
+    }
 }

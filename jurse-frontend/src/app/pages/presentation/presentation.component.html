@@ -1,1 +1,36 @@
-<p>presentation works!</p>
+<div class="main-container">
+    <div class="container-box">
+        <div class="container-header">
+            <div class="page-title">
+                Keynote Speakers 
+            </div>
+        </div>
+        <div class="container-content">
+            <div class="w-100 d-flex justify-content-center">
+                <span class="loader" *ngIf="loader"></span>
+            </div>
+            <div class="organizers-container" *ngIf="!loader">
+                <div class="organizer-container" *ngFor="let speaker of keyNoteSpeakers">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-box">
+        <div class="container-header">
+            <div class="page-title">
+                Special Sessions
+            </div>
+        </div>
+        <div class="container-content">
+            <div class="w-100 d-flex justify-content-center">
+                <span class="loader" *ngIf="loader"></span>
+            </div>
+            <div class="organizers-container" *ngIf="!loader">
+                <div class="organizer-container" *ngFor="let session of specialSessions">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

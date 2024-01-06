@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/organizers/all', 'App\Http\Controllers\OrganizerController@getAll');
 Route::get('/tweets/all', 'App\Http\Controllers\TweetController@getAll');
+Route::get('/keynotespeakers/all', 'App\Http\Controllers\KeyNoteSpeakerController@getAll');
+Route::get('/specialsessions/all', 'App\Http\Controllers\SpecialSessionController@getAll');

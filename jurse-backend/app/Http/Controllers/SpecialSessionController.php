@@ -62,4 +62,10 @@ class SpecialSessionController extends Controller
     {
         //
     }
+
+
+    public function getAll() {
+        $specialSessions = SpecialSession::all();
+        return response()->json($specialSessions);
+    }
 }
