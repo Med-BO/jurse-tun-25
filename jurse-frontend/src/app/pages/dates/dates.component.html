@@ -1,1 +1,43 @@
-<p>dates works!</p>
+<div class="main-container">
+    <div class="container-box">
+        <div class="container-header">
+            <div class="page-title">
+                Dates & Schedule
+            </div>
+            <div class="page-subtitle">
+                Keep up to date with the latest schedule updates
+            </div>
+        </div>
+        <div class="container-content">
+            <form>
+                <div class="mb-3 row">
+                    <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Search an event:</label>
+                    <div class="col-xs-3 col-sm-auto">
+                        <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
+                    </div>
+                </div>
+            </form>
+            
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Event Title</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Application Deadline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let event of events$ | async; index as i">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>
+                            <ngb-highlight [result]="event.title" [term]="filter.value"></ngb-highlight>
+                        </td>
+                        <td><ngb-highlight [result]="event.date" [term]="filter.value"></ngb-highlight></td>
+                        <td><ngb-highlight [result]="event.applicationDeadline" [term]="filter.value"></ngb-highlight></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
