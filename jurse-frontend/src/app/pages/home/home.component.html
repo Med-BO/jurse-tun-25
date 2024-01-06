@@ -32,10 +32,9 @@
                 <div class="w-100 d-flex justify-content-center">
                     <span class="loader" *ngIf="loader"></span>
                 </div>
-                <div class="organizers-container" *ngIf="!loader">
-                    <div class="organizer-container" *ngFor="let organizer of organizers">
-                        
-                    </div>
+                <div class="organizers-container" style="align-items: stretch;" *ngIf="!loader">
+                    <ngx-tweet tweetId="1669651208859009026"></ngx-tweet>
+                    <ngx-tweet tweetId="1659420432729030662"></ngx-tweet>
                 </div>
             </div>
         </div>
@@ -50,9 +49,7 @@
                     <span class="loader" *ngIf="loader"></span>
                 </div>
                 <div class="organizers-container" *ngIf="!loader">
-                    <div class="organizer-container" *ngFor="let organizer of organizers">
-                        
-                    </div>
+                    <span class="no-links">There are no links to check out for the moments!</span>
                 </div>
             </div>
         </div>

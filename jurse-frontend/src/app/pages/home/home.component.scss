@@ -37,10 +37,16 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
 
     & .container-box {
         width: 48%;
     }
+}
+
+.no-links {
+    font-size: 1em;
+    color: gray;
+    text-align: center;
 }

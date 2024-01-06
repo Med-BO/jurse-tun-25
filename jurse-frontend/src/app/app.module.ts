@@ -16,6 +16,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxTweetModule } from 'ngx-tweet';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxTweetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
