@@ -7,3 +7,20 @@
 .container-box {
     margin-bottom: 20px;
 }
+.sessions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.speakers-carousel {
+    width: 60%;
+
+}
+.speakers-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}.sessions-accordions {
+    width: -webkit-fill-available;
+}

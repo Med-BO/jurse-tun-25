@@ -9,9 +9,20 @@
             <div class="w-100 d-flex justify-content-center">
                 <span class="loader" *ngIf="loader"></span>
             </div>
-            <div class="organizers-container" *ngIf="!loader">
-                <div class="organizer-container" *ngFor="let speaker of keyNoteSpeakers">
-
+            <div class="speakers-container" *ngIf="!loader">
+                <img src="../../../assets/images/speakers.png" height="300px" alt="">
+                <div class="speakers-carousel">
+                    <ngb-carousel *ngIf="images">
+                        <ng-template ngbSlide *ngFor="let speaker of keyNoteSpeakers; index as i"> 
+                            <div class="picsum-img-wrapper">
+                                <img [src]="images[i]" alt="Random first slide" />
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>{{ speaker.firstname + " " + speaker.lastname }}</h3>
+                                <p>{{ speaker.description }}</p>
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
                 </div>
             </div>
         </div>
@@ -26,10 +37,17 @@
             <div class="w-100 d-flex justify-content-center">
                 <span class="loader" *ngIf="loader"></span>
             </div>
-            <div class="organizers-container" *ngIf="!loader">
-                <div class="organizer-container" *ngFor="let session of specialSessions">
-                    
+            <div class="sessions-container" *ngIf="!loader">
+                <div class="sessions-accordions">
+                    <ngb-accordion #acc="ngbAccordion" *ngFor="let session of specialSessions;">
+                        <ngb-panel [id]="session.id.toString()" [title]="'Session N°' + session.order + ' : ' + session.title">
+                            <ng-template ngbPanelContent>
+                                {{ session.description }}
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
                 </div>
+                <img src="../../../assets/images/sessions.png" height="300px" alt="">
             </div>
         </div>
     </div>

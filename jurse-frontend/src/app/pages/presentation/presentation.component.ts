@@ -10,6 +10,7 @@ import { SpecialSessionsService } from 'src/app/data/services/special-sessions.s
   styleUrls: ['./presentation.component.scss']
 })
 export class PresentationComponent implements OnInit {
+  images = [1, 17].map((n) => `https://picsum.photos/id/${n}/900/500`);
   loader: boolean = true;
   specialSessions: SpecialSession[] = [];
   keyNoteSpeakers: KeyNoteSpeaker[] = [];
