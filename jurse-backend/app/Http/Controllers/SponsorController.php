@@ -62,4 +62,9 @@ class SponsorController extends Controller
     {
         //
     }
+
+    public function getAll() {
+        $sponsors = Sponsor::all();
+        return response()->json($sponsors);
+    }
 }

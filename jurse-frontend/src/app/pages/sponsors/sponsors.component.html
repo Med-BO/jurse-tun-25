@@ -1,1 +1,19 @@
-<p>sponsors works!</p>
+<div class="main-container">
+    <div class="container-box">
+        <div class="container-header">
+            <div class="page-title">
+                Our Sponsors
+            </div>
+        </div>
+        <div class="container-content">
+            <div class="w-100 d-flex justify-content-center">
+                <span class="loader" *ngIf="loader"></span>
+            </div>
+            <div class="sponsors-container" *ngIf="!loader">
+                <div class="sponsor-container" *ngFor="let sponsor of sponsors">
+                    <img [src]="sponsor.src" [alt]="sponsor.alt" width="140px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
