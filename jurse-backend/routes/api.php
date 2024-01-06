@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/organizers/all', 'App\Http\Controllers\OrganizerController@getAll');
+Route::get('/tweets/all', 'App\Http\Controllers\TweetController@getAll');

@@ -1,1 +1,60 @@
-<p>home works!</p>
+<div class="event-banner">
+    <h1>JOINT URBAN REMOTE SENSING EVENT</h1>
+    <h4>Sidi Bousaid, Tunisia</h4>
+    <h4>17 - 19 May 2025</h4>
+</div>
+<div class="main-container">
+    <div class="container-box">
+        <div class="container-header">
+            <div class="page-title">
+                Meet the organizers
+            </div>
+        </div>
+        <div class="container-content">
+            <div class="w-100 d-flex justify-content-center">
+                <span class="loader" *ngIf="loader"></span>
+            </div>
+            <div class="organizers-container" *ngIf="!loader">
+                <div class="organizer-container" *ngFor="let organizer of organizers">
+                    <img [src]="organizer.src" [alt]="organizer.alt">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two-element-container">
+        <div class="container-box">
+            <div class="container-header">
+                <div class="page-title">
+                    Join the discussion on X
+                </div>
+            </div>
+            <div class="container-content">
+                <div class="w-100 d-flex justify-content-center">
+                    <span class="loader" *ngIf="loader"></span>
+                </div>
+                <div class="organizers-container" *ngIf="!loader">
+                    <div class="organizer-container" *ngFor="let organizer of organizers">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-box">
+            <div class="container-header">
+                <div class="page-title">
+                    Useful links
+                </div>
+            </div>
+            <div class="container-content">
+                <div class="w-100 d-flex justify-content-center">
+                    <span class="loader" *ngIf="loader"></span>
+                </div>
+                <div class="organizers-container" *ngIf="!loader">
+                    <div class="organizer-container" *ngFor="let organizer of organizers">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

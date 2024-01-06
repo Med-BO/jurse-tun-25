@@ -62,4 +62,10 @@ class TweetController extends Controller
     {
         //
     }
+
+    public function getAll()
+    {
+        $tweets = Tweet::all();
+        return response()->json($tweets);
+    }   
 }

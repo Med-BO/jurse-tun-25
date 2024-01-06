@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     background-color: #F0F2F5;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -14,6 +16,5 @@
 }
 
 .main-app-content {
-    margin: 12px;
     height: -webkit-fill-available;
 }

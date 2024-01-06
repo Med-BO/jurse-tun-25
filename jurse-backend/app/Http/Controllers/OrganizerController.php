@@ -62,4 +62,10 @@ class OrganizerController extends Controller
     {
         //
     }
+
+    public function getAll()
+    {
+        $organizers = Organizer::all();
+        return response()->json($organizers);
+    }
 }

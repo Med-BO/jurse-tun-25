@@ -1,0 +1,46 @@
+.main-container {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.event-banner {
+    margin-top: 60px;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-image: url(../../../assets/images/event_banner.jpg);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.organizers-container {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+    & .organizer-container {
+        & img {
+            width: 200px;
+        }
+    }
+}
+.two-element-container {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    & .container-box {
+        width: 48%;
+    }
+}
